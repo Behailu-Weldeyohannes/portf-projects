@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>2-Dimensional JavaScript Game</title>
+  </head>
+  <body>
+    <h1>2-Dimensional JavaScript Game</h1>
+    <!-- Rules -->
+    <button id="rules-btn" class="btn rules-btn">Game Rules</button>
+    <div id="rules" class="rules">
+      <h2>How To Play</h2>
+      <p>
+        You can use your mouse or keyboard keys to move the paddle and hit the ball
+        up and break the blocks.
+      </p>
+      <p>
+        If you break all the balls,you win and get a Congrats alert. If you miss
+        the ball, your score and blocks will reset. <br />
+        Good Luck!
+      </p>
+      <button id="close-btn" class="btn">Close</button>
+    </div>
+    <!-- for the steps -->
+    <button id="steps-btn" class="btn steps-btn">Show Steps</button>
+    <!-- Canvas -->
+    <!-- <canvas id="myCanvas" width="800" height="600"></canvas> -->
+    <canvas id="myCanvas" width="480" height="320"></canvas>
+    <div id="steps" class="steps">
+        <h2>Ten steps used to create the game</h2>
+        <p>
+            <ol>
+                <li>Create the Canvas</li>
+                <li>Create and draw the ball</li>
+                <li>Bounce of the walls</li>
+                <li>Create and draw paddle and keyboard controls</li>
+                <li>Draw scroe</li>
+                <li>Build the brick field</li>
+                <li>collision detection</li>
+                <li>Track the score and win</li>
+                <li>Mouse control</li>
+                <li>Add wall boundaries</li>
+            </ol>
+        </p>
+        <button id="closes-btn" class="btn">Close</button>
+      </div>
+    <script src="game.js"></script>
+   
+  </body>
+</html>

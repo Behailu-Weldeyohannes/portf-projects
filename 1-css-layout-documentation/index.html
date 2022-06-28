@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- This is the navbar -->
+    <nav id="navbar">
+      <header>CSS Flexbox and Grid Documentation</header>
+      <ul>
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li>
+          <a class="nav-link" href="#flex-box"
+            > <strong>Flex Box: What is the Flexbox?</strong> </a
+          >
+        </li>
+        <li>
+          <a class="nav-link" href="#The-two">The Two Axes</a>
+        </li>
+        <li><a class="nav-link" href="#flex-container">The Flex Container</a></li>
+        <li><a class="nav-link" href="#Flex-Items">Flex Items</a></li>
+        <li>
+          <a class="nav-link" href="#Grid"
+            ><strong>CSS Grid: What is Grid?</strong></a
+          >
+        </li>
+        <li><a class="nav-link" href="#Grid-Container">Grid Container</a></li>
+        <li>
+          <a class="nav-link" href="#Grid-Item">Grid Item</a>
+        </li>
+        
+        
+        <li><a class="nav-link" href="#Reference">Reference</a></li>
+      </ul>
+    </nav>
+    <!-- end of navbar -->
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <article>
+          <p>
+            CSS provides many tools and properties that we can use to position
+            elements on a website.The Flexible Box Module is a one-dimensional
+            layout model, and method that is designed to offer space
+            distribution between items in an interface and powerful alignment
+            capabilities. On the other hand, CSS Grid is a set of css properties for building 2-dimensional layouts. Both are designed to write fewer and cleaner html and
+            css codes.This documentation gives an outline of the main features
+            of flexbox.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="flex-box">
+        <header>What is the Flexbox</header>
+        <article>
+          <p>
+            Flexbox is a tool that is used in CSS to easily move items around
+            within their containers. This is essential for the layout and
+            organization of your website. Flexbox is tool to build layouts.
+            Flexbox deals with layout in one dimension at a time — either as a
+            row or as a column. In a nutshell, Flexbox is a set of related css
+            properties for building one dimensional layouts.
+          </p>
+          <!-- &lt;.container&gt; This is a paragraph &lt;/p&gt;  -->
+          <div class="css-codes">
+            <p>.container{ display: flex;}</p>
+          </div>
+
+          <p>
+            Flexbox automatically align items to one another inside a parent
+            container. Flexbox provides a cross browser-compatible method to
+            implement layouts and makes it easier to add responsive design to
+            your application, without you having to explicitly deal with
+            positioning the components of your page.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="The-two">
+        <header>The Two Axes</header>
+        <article>
+          <p>
+            There are two axis, the main axis and the cross axis. The main axis
+            is defined by the flex-direction property, and the cross axis runs
+            perpendicular to it. Everything we do with flexbox refers back to
+            these axes. By default, the main axis refers to the x-axis or the
+            horizontal axis. Likewise, the cross axis refers to the y-axis or
+            the vertical axis.
+          </p>
+          <h3>the Main Axis</h3>
+          <p>
+            The main axis is defined by flex-direction.The flex-direction CSS
+            property specifies how flex items are placed in the flex container -
+            either vertically or horizontally. This property also determines
+            whether those flex items appear in order or in reverse order.
+          </p>
+          <p><strong> Flex-direction</strong> has four possible values:</p>
+          <ul>
+            <li>row</li>
+            <li>row-reverse</li>
+            <li>column</li>
+            <li>column-reverse</li>
+          </ul>
+
+          <div class="css-codes">
+            <p>
+              .container { <br />
+              display: flex; <br />
+              flex-direction: column; <br />
+              }
+            </p>
+          </div>
+          <h3>The Cross Axis</h3>
+          <p>
+            The cross axis runs perpendicular to the main axis.For ecample, if
+            the flex-direction (main axis) is set to row or row-reverse the
+            cross axis runs down the columns. If the main axis is column or
+            column-reverse then the cross axis runs along the rows.
+          </p>
+          <p><strong> Flex-direction</strong> has four possible values:</p>
+          <ul>
+            <li>row</li>
+            <li>row-reverse</li>
+            <li>column</li>
+            <li>column-reverse</li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="flex-container">
+        <header>The flex Container: Properties for the Parent</header>
+        <article>
+          <p>
+            There are two important components to a flexbox layout: flex
+            containers and flex items. Flex container is an area of a document
+            laid out using flexbox. The flex container is the main element that
+            flex items are placed inside. 
+            <p>The flex container is the parent
+              element of all flex items. The flex container is the only element
+              that has the flex-direction. All direct child elements of a flex container are flex items.</p> 
+          </p>
+            <p>
+              To designate an element as a flex container, set the element’s display property to flex or inline-flex. </p>
+    
+              <code class="css-codes">.container{
+                display: flex;
+                <!-- display: inline-flex; -->
+              }</code>
+            <p>
+              Once an item is a flex container, there are many properties we can use to specify how its children behave. Some of the properties are: 
+            </p>
+            <ul>
+              <li>justify-content: flex-start | flex-end | center |  space-between | space-around | space-evenly</li>
+              <li>align-items: stretch | flex-start | flex-end | center | baseline</li>
+              <li>flex-direction: row | row-reverse | column | column-reverse</li>
+              <li>flex-wrap: nowrap | wrap | wrap-reverse</li>
+              <li>align-content: stretch | flex-start | flex-end | center | space-between | space-around</li>
+              <li>align-content</li>
+              <li>gap, row-gap, column-gap: 0   this helps to create space between items, without using margin</li>
+             
+              
+            </ul>
+        </article>
+      </section>
+      <section class="main-section" id="Flex-Items">
+        <header>Flex Items-Properties for the Children</header>
+        <article>
+        <p>
+          The following are some of the properties meant to be set on the flex item.
+        </p>
+        <ul>
+          <li>align-self: auto | stretch | flex-start | flex-end | center | | baseline</li>
+          <li>flex-grow: 0 | 1  Note: 0 means no, 1+  means yes </li>
+          <li>flex-shrink: 0 | 1  Note: 0 means no, 1+  means yes</li>
+          <li>flex-basis: auto | length  </li>
+          <li>flex: 0 1 auto | int int len | shorthand for flex-grow, -shrink, -basis</li>
+           
+        </ul>
+      </article>
+        <!-- CSS Grid -->
+      </section>
+      <section class="main-section" id="Grid">
+        <header>CSS Grid: What is Grid?</header>
+        <article>
+          <p>The CSS Grid is is a two-dimensional grid-based layout system. It is a  tool for arranging items in a grid and helps to lay out items in a two-dimensional grid.
+            The grid can be used to layout entire web pages. Whereas Flexbox is mainly useful for positioning items in a one-dimensional layout. 
+            CSS grid is used for two-dimensional layouts. However, CSS Grid is not meant to replace flexbox. 
+            The CSS Grid provides many tools for aligning and moving elements across both rows and columns.</p>
+            <p>the following are important terminologies in CSS Grid:</p>
+            <ul>
+              <li>Grid Container</li>
+              <li>Grid Line</li>
+              <li>Grid Track</li>
+              <li>Grid Area</li>
+              <li>Grid Item</li>
+              <li>Grid Cell</li>
+            </ul>
+          
+
+
+        </article>
+      </section>
+
+      <section class="main-section" id="Grid-Container">
+        <header>Grid Container</header>
+        <article>
+          <p>
+            Grid Container defines the element as a grid container and establishes a new grid formatting context for its contents.
+            The element on which display: grid is applied. It’s the direct parent of all the grid items. 
+            In order to make the grid container you need to set the display property to either grid or inline-grid.
+          </p>
+          <p>
+            The following are few of the properties meant to be set on the properties for the Parent.
+          </p>
+          <ul>
+            <li>display: grid | inline-grid </li>
+            <li>grid-template-columns: track-size | line-name </li>
+            <li>grid-template-areas: grid-area-name | . a period signifies an empty grid cell | none </li>
+            <li>grid-template: none | grid-template-rows | grid-template-columns  </li>
+            <li>etc</li>
+             
+          </ul>
+          <code class="css-codes">
+            .container{
+              display: grid;
+            }
+          </code>
+          <code>
+            .container {
+              grid-template-columns: 100px 50px 100px;
+              grid-template-rows: 80px auto 80px; 
+              gap: 15px 10px;
+            }
+          </code>
+          
+        </article>
+      </section>
+      <section class="main-section" id="Grid-Item">
+        <header>Grid Items</header>
+        <article>
+          <h3>Grid Items</h3>
+         <p>
+          Grid Items are the children (i.e. direct descendants) of the grid container.
+          A grid container contains grid items. By default, a container has one grid item for each column, in each row, 
+          but we can still style the grid items so that they will span multiple columns and/or rows.</p>
+          <p> <strong>Note:</strong>  These properties have no effect on a grid item: <em>float, display: inline-block, display: table-cell, vertical-align and column-span.</em>   
+
+          </p>
+          <p>
+            The following are some of the properties meant to be set on the Properties for the Children.
+          </p>
+          <ul>
+            <li>grid-column-start: line | span | auto</li>
+            <li>grid-column-end: line | span | auto </li>
+            <li>grid-row-start: line | span | auto</li>
+            <li>grid-row-end: line | span | auto  </li>
+            <li>grid-column: start-line | end-line</li>
+            <li>grid-row: start-line | end-line</li>
+          </ul>
+          <code>
+            .item {
+              grid-column-start: <number> | <name> | span <number> | span <name> | auto;
+              grid-column-end: <number> | <name> | span <number> | span <name> | auto;
+              grid-row-start: <number> | <name> | span <number> | span <name> | auto;
+              grid-row-end: <number> | <name> | span <number> | span <name> | auto;
+            }
+          </code>
+
+        </article>
+      </section>
+     
+      </section>
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <article>
+          <ul>
+            <li>
+              All the documentation in this page is taken from
+              
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">
+                  MDN Web Docs  for CSS Grid Layout   
+                </a>
+
+            </li>,
+              <a
+                href="https://css-tricks.com/snippets/css/complete-guide-grid/"
+                target="_blank"
+                >CSS-TRICKS</a
+              >
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+    
+  </body>
+</html>
